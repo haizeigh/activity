@@ -23,7 +23,7 @@
 #include "FeatureExtractor.h"
 
 
-int main2()
+int main()
 {
     DataProc::parameters param;
 	param.uiSlideWinWidth = 512;
@@ -33,7 +33,7 @@ int main2()
     printf("--------------------");
 
 //    std::string basePath = "Datasets/train/";
-    std::string basePath = "/home/westwell/CLionProjects/activity1/demos/Datasets/train/";
+    std::string basePath = "/home/westwell/Documents/project/activity/demos/Datasets/train/";
 
 	if (datareader.readDir(basePath))
 	{
@@ -41,7 +41,7 @@ int main2()
 		for (int i = 0; i < dirlist.size();i ++)
 		{
 			//std::string str(dirlist[i]);
-			dirlist[i] = basePath + dirlist[i];
+//			dirlist[i] = basePath + dirlist[i];
 			
 			if (datareader.readDir(dirlist[i]))
 			{
@@ -51,7 +51,7 @@ int main2()
 				{
 					for (int j = 0; j < filelist.size(); j ++)
 					{
-						filelist[j] = dirlist[i] + "/" + filelist[j];
+//						filelist[j] = dirlist[i] + "/" + filelist[j];
 						if (datareader.readFile(filelist[j]))
 						{
 							arma::mat fileMat = datareader.getFileData();

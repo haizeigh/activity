@@ -109,6 +109,7 @@ private:
 
 private:
 
+    SNeuralNetworkParameter param_;
 	UINT32      m_uiNumOfLayers;   /**< number of layers */
 	UINT32      m_iNumOfClass;     /**< number of class */
 	UINT32      m_uiNumOfInput;    /**< the number of neurons in input layer   */

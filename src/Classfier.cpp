@@ -20,7 +20,10 @@ CNeuralNetwork::~CNeuralNetwork()
 
 void CNeuralNetwork::setNeuralNetworkParm(const SNeuralNetworkParameter& _param)
 {
-	UINT32* layers = new UINT32(_param.uiNumOfLayers);
+
+    param_ = _param;
+
+/*	UINT32* layers = new UINT32(_param.uiNumOfLayers);
 	m_nnEngine->create_standard_array(_param.uiNumOfLayers,layers);
 	m_nnEngine->set_learning_rate(_param.fLearingRate);
 	m_nnEngine->set_activation_steepness_hidden(1.0);
@@ -31,13 +34,26 @@ void CNeuralNetwork::setNeuralNetworkParm(const SNeuralNetworkParameter& _param)
 
 	m_uiNumOfMaxIter = _param.uiNumOfMaxIter;
 	m_fDesiredError  = _param.fDesiredError;
-	delete[] layers;
+	delete[] layers;*/
 }
 
 void CNeuralNetwork::train()
 {
-	m_nnEngine->init_weights(m_nnTrainData);
-	m_nnEngine->train_on_data(m_nnTrainData,m_uiNumOfMaxIter,0,m_fDesiredError);
+
+
+    struct fann *ann = fann_create_standard(param_.uiNumOfLayers, param_.uiNumOfInput, param_.uiNumOfHidden, param_.uiMumOfOutput);
+
+    fann_set_activation_function_hidden(ann, FANN_SIGMOID_SYMMETRIC);
+    fann_set_activation_function_output(ann, FANN_SIGMOID_SYMMETRIC);
+
+    fann_train_on_file(ann, "train.data", param_.uiNumOfMaxIter, 100, param_.fDesiredError );
+
+    fann_save(ann, "ar.net");
+
+    fann_destroy(ann);
+
+//	m_nnEngine->init_weights(m_nnTrainData);
+//	m_nnEngine->train_on_data(m_nnTrainData,m_uiNumOfMaxIter,0,m_fDesiredError);
 }
 
 // int CNeuralNetwork::classify(FLOAT32* _data)
@@ -56,6 +72,19 @@ void CNeuralNetwork::train()
 
 int CNeuralNetwork::classify( const std::string _str)
 {
+
+    fann_type *calc_out;
+    fann_type input[2];
+
+    struct fann *ann = fann_create_from_file("ar.net");
+
+    input[0] = -1;
+    input[1] = 1;
+    calc_out = fann_run(ann, input);
+
+    printf("xor test (%f,%f) -> %f\n", input[0], input[1], calc_out[0]);
+
+    fann_destroy(ann);
 
 }
 

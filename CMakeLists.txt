@@ -25,9 +25,11 @@ file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 
 #add_executable(activity1 main.cpp)
 #add_executable(activity1 demos/test_readDir.cpp ${SRC_FILES}  )
-add_executable(activity1  demos/test_reader.cpp
+#add_executable(activity1  demos/test_reader.cpp
+add_executable(activity1  demos/test_train.cpp
         ${CMAKE_SOURCE_DIR}/src/DataReader.cpp
         ${CMAKE_SOURCE_DIR}/src/DataProc.cpp
         ${CMAKE_SOURCE_DIR}/src/FeatureExtractor.cpp
+        ${CMAKE_SOURCE_DIR}/src/FeatureAnalyse.cpp
         )
 target_link_libraries(activity1 -lmlpack -larmadillo -larmadillo)

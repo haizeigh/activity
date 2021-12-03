@@ -1,4 +1,4 @@
-/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/175/bin/ninja/linux/ninja -G Ninja /home/westwell/CLionProjects/activity1
+/home/westwell/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/westwell/Documents/project/activity
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/westwell/CLionProjects/activity1/cmake-build-debug
+-- Build files have been written to: /home/westwell/Documents/project/activity/cmake-build-debug

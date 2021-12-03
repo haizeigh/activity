@@ -1,3 +1,0 @@
-/home/westwell/CLionProjects/activity1/CMakeFiles/rebuild_cache.dir
-/home/westwell/CLionProjects/activity1/CMakeFiles/edit_cache.dir
-/home/westwell/CLionProjects/activity1/CMakeFiles/activity1.dir

@@ -1,3 +1,3 @@
-/home/westwell/CLionProjects/activity1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/westwell/CLionProjects/activity1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/westwell/CLionProjects/activity1/cmake-build-debug/CMakeFiles/activity1.dir
+/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/activity1.dir

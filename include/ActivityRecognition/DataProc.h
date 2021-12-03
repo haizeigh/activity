@@ -23,9 +23,9 @@ using namespace arma;
 	//! @brief moving average filter for accelerator signal
 	/*  Enable the function using macro _FILTER_MOVING_SMOOTHING_
 	*/
-#ifdef _FILTER_MOVING_SMOOTHING_
-		void filterMV(const MatrixXd& dataArray);
-#endif //_FILTER_MOVING_SMOOTHING_
+//#ifdef _FILTER_MOVING_SMOOTHING_
+		void filterMV(arma::mat fileMat);
+//#endif //_FILTER_MOVING_SMOOTHING_
     //! @brief low pass filter for accelerator signal
 	/* Enable the function using macro _FILTER_LOW_PASS_
 	*/

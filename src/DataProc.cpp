@@ -15,10 +15,10 @@ DataProc::DataProc(parameters _param)
 	m_uiWinStep  = _param.uiSlideWinStep;
 }
 
-#ifdef _FILTER_MOVING_SMOOTHING_
-void DataProc::filterMV(const MatrixXd& dataArray)
+//#ifdef _FILTER_MOVING_SMOOTHING_
+void DataProc::filterMV(arma::mat fileMat)
 {
-	for (int i = 0; i < dataArray.cols(); ++i)
+	/*for (int i = 0; i < dataArray.cols(); ++i)
 	{
       if (i < 1)
 	  {
@@ -32,9 +32,19 @@ void DataProc::filterMV(const MatrixXd& dataArray)
 		  m_mFilter.row(1)(i) = (dataArray.row(1)(i -1) + dataArray.row(1)(i) +  dataArray.row(1)(i + 1)) / 3;
 		  m_mFilter.row(2)(i) = (dataArray.row(2)(i -1) + dataArray.row(2)(i) +  dataArray.row(2)(i + 1)) / 3;
 	  }
-	}
+	}*/
+
+    for (int i = 1; i < fileMat.n_cols - 1; ++i){
+
+        for (int j = 0; j < fileMat.n_rows; ++j) {
+            fileMat[j,i] = (fileMat[j,i-1] + fileMat[j,i] + fileMat[j,i+1]) /3 ;
+        }
+
+    }
+
+
 }
-#endif //_FILTER_MOVING_SMOOTHING_
+//#endif //_FILTER_MOVING_SMOOTHING_
 
 BOOL8 DataProc::segment()
 {
