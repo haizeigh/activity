@@ -25,8 +25,8 @@
 #include "FeatureAnalyse.h"
 //#include "fann.h"
 
-#include "doublefann.h"
-#include "fann_cpp.h"
+//#include "doublefann.h"
+//#include "fann_cpp.h"
 #include "Classfier.h"
 
 
@@ -137,7 +137,7 @@ int main(int argc, char** argv)
       network.train();
 
 
-      network.classify();
+      network.classify("");
 
 
 

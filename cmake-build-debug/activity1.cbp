@@ -93,6 +93,9 @@
 		<Unit filename="/home/westwell/Documents/project/activity/demos/test_train.cpp">
 			<Option target="activity1"/>
 		</Unit>
+		<Unit filename="/home/westwell/Documents/project/activity/src/Classfier.cpp">
+			<Option target="activity1"/>
+		</Unit>
 		<Unit filename="/home/westwell/Documents/project/activity/src/DataProc.cpp">
 			<Option target="activity1"/>
 		</Unit>

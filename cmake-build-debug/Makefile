@@ -153,6 +153,30 @@ demos/test_train.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity1.dir/build.make CMakeFiles/activity1.dir/demos/test_train.cpp.s
 .PHONY : demos/test_train.cpp.s
 
+src/Classfier.o: src/Classfier.cpp.o
+.PHONY : src/Classfier.o
+
+# target to build an object file
+src/Classfier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity1.dir/build.make CMakeFiles/activity1.dir/src/Classfier.cpp.o
+.PHONY : src/Classfier.cpp.o
+
+src/Classfier.i: src/Classfier.cpp.i
+.PHONY : src/Classfier.i
+
+# target to preprocess a source file
+src/Classfier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity1.dir/build.make CMakeFiles/activity1.dir/src/Classfier.cpp.i
+.PHONY : src/Classfier.cpp.i
+
+src/Classfier.s: src/Classfier.cpp.s
+.PHONY : src/Classfier.s
+
+# target to generate assembly for a file
+src/Classfier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity1.dir/build.make CMakeFiles/activity1.dir/src/Classfier.cpp.s
+.PHONY : src/Classfier.cpp.s
+
 src/DataProc.o: src/DataProc.cpp.o
 .PHONY : src/DataProc.o
 
@@ -261,6 +285,9 @@ help:
 	@echo "... demos/test_train.o"
 	@echo "... demos/test_train.i"
 	@echo "... demos/test_train.s"
+	@echo "... src/Classfier.o"
+	@echo "... src/Classfier.i"
+	@echo "... src/Classfier.s"
 	@echo "... src/DataProc.o"
 	@echo "... src/DataProc.i"
 	@echo "... src/DataProc.s"

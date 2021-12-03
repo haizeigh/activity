@@ -31,5 +31,6 @@ add_executable(activity1  demos/test_train.cpp
         ${CMAKE_SOURCE_DIR}/src/DataProc.cpp
         ${CMAKE_SOURCE_DIR}/src/FeatureExtractor.cpp
         ${CMAKE_SOURCE_DIR}/src/FeatureAnalyse.cpp
+        ${CMAKE_SOURCE_DIR}/src/Classfier.cpp
         )
 target_link_libraries(activity1 -lmlpack -larmadillo -larmadillo)

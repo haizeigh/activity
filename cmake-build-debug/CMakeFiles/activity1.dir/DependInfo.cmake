@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/westwell/Documents/project/activity/demos/test_train.cpp" "/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/activity1.dir/demos/test_train.cpp.o"
+  "/home/westwell/Documents/project/activity/src/Classfier.cpp" "/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/activity1.dir/src/Classfier.cpp.o"
   "/home/westwell/Documents/project/activity/src/DataProc.cpp" "/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/activity1.dir/src/DataProc.cpp.o"
   "/home/westwell/Documents/project/activity/src/DataReader.cpp" "/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/activity1.dir/src/DataReader.cpp.o"
   "/home/westwell/Documents/project/activity/src/FeatureAnalyse.cpp" "/home/westwell/Documents/project/activity/cmake-build-debug/CMakeFiles/activity1.dir/src/FeatureAnalyse.cpp.o"
